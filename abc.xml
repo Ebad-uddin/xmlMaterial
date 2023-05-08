@@ -1,0 +1,202 @@
+<!-- simple elements in xsd 
+ simple elements contains elements with text data
+<element-name="ElementName" type="dataType"></element-name> -->
+
+<!-- <xml:schema xmlns:xs="http://www.w3.org/2001/XMLShema">
+<xs:element name="empName" type="xs:string"/>
+<empName>Ebad</empName>
+</xml:schema> 
+<xml:schema xmlns:as="http://www.w3.org/2001/XMLShema">
+<as:element name="books" type="as:string"/>
+<books>Js</books>
+
+</xml:schema> -->
+
+
+
+
+
+
+
+
+
+<!-- complexELement
+<element-name="ElementName">
+<complexType>
+<sequence>
+<elementName name="child1" type"dt"/>
+<elementName name="child2" type"dt"/>
+<elementName name="child3" type"dt"/>
+</sequence>
+</complexType>-->
+
+<!-- complex type XSD
+
+in XSD all the elements must be created inside the schema tag -->
+
+<!-- <schema>
+<element name="employee">
+<complexELement>
+<sequence>
+<empName name="Name" type="string"/>
+<empage name="age" type="int"/>
+<empclass name="class" type="string"/>
+</sequence>
+</complexELement> -->
+
+<!-- XML according to above XSD -->
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<employee>
+<empName>Ebad</empName>
+<empage>26</empage>
+<empclass> Masters </empclass>
+</employee>
+</element>
+</schema> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Attributes in xsd 
+
+to create an attribute in xsd the syntax is as follows
+<attribute name="attributeName" type="dataType"/>
+eg:
+<attribute name="courseId" type="int"/>
+<attribute name="courseName" type="string"/>
+
+-> all the attributes must be written under the complex type element
+
+ -->
+
+
+<!-- Example of XSD by using attributes -->
+
+<!-- <schema>
+
+<element name="course">
+<complexType>
+<attribute name="courseId" dataType="int" use="required"/>  <!-- required is used to mention the attribute is mandatory otherwise it is opptional -->
+<attribute name="courseName" dataType="string" default="Python"/> <!-- default is used to mention the default value  -->
+</complexType>
+
+In xml
+
+<course courseName="JS"/>
+
+</element>
+</schema> -->
+
+
+
+
+
+
+
+
+<!-- mixed elements 
+    
+    
+    <schema>
+<element name="employee">
+<complexELement mixed="true">
+<sequence>
+<empName name="Name" type="string"/>
+<empage name="age" type="int"/>
+<empclass name="class" type="string"/>
+</sequence>
+</complexELement> -->
+
+<!-- XML according to above XSD -->
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<employee> the employee in office whose name is 
+<empName>Ebad</empName> and age is 
+<empage>26</empage> and he studied in class
+<empclass> Masters </empclass>
+</employee>
+</element>
+</schema> -->
+
+
+
+
+<!-- elements with empty content and attributes
+<schema>
+<element name="course">
+<complexType>
+<attribute name="courseId" dataType="int" use="required"/>
+<attribute name="courseName" dataType="string" default="Python"/>
+</complexType> -->
+
+<course courseId="" courseName=""  />
+
+
+</schema>
+
+
+
+
+
+<!-- namespace -->
+
+<schema targetNamespace="http://info.com" xmlns:"www.w3.org/XMLSchema">
+<element name="course">
+
+<complexType>
+<sequence> 
+<element name="courseId" dataType="int">
+<element name="courseName" dataType="string">
+</sequence>
+</complexType> -->
+
+
+XML declaration
+
+
+<course xmlns:c="http://info.com"/>
+<c:courseId> 00 </c:courseId>
+<c:courseName> 00 </c:courseName>
+</schema>
+
+
+
+
+
+mapping xml by using XSD
+
+
+<schema targetNameSpace="http://www.info.con" 
+xmlns="http://www.w3.org/2001/xmlschema"
+elementFormDefault="qualified"       -- it is used to instruct the parser that parse the program as above namespace
+/>
+<element name="employees" minOccrs="0" maxOccurs="unbounded">
+<complexType>
+<sequence>
+<element name="employee">
+<complexType>
+<sequence>
+<element name="empNo" type="int"/>
+<element name="empName" type="string"/>
+</sequence>
+</complexType>
+</element>
+</sequence>
+</complexType>
+</schema>
+</element>
+
+
+
+
+
+
+to include the XSD into the xml file use schemaLocation attribute in the root element of the xml file 
+eg: 
+<element schemeLocation="tns1 xsdfileName"/>  tns1-- targetNameSpace of th xsdfileName1 for attaching the multiple xsds using tns2 xsdfileName2 and tns3 xsdfileName3
