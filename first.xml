@@ -1,110 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-xmlns:xs="https://www.w3.org/2001/XMLSchema"
-
-indicates that the elements and data types used in the schema come from the "http://www.w3.org/2001/XMLSchema" namespace. It also specifies that the elements and data types that come from the "http://www.w3.org/2001/XMLSchema" namespace should be prefixed with xs:
-
-targetNamespace="http://www.empinfo.com"
-
-indicates that the elements defined by this schema (note, to, from, heading, body.) come from the "https://www.empinfo.com" namespace.
-
-xmlns="https://www.info.com"
-
-indicates that the default namespace is "https://www.info.com".
-
-elementFormDefault="qualified"
-
-indicates that any elements used by the XML instance document which were declared in this schema must be namespace qualified.
 
 
-
- -->
-
-<!-- <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" 
-targetNamespace="http://www.empinfo.com"
-xmlns="https://www.info.com"
-elementFromDefault="qualified"
->
-<element name="employee">
-<compexType>
-<sequence>
-<element name="empNo" type="int" />
-<element name="empName" type="string" />
-</sequence>
-
-</compexType>
-
-</element>
-
-
-<employee>
-<empNo> 001 </empNo>
-<empName>Ebad</empName>
-</employee>
-</x:schema> -->
-
-<!-- <xa:schema xmlns:xa="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.bookinfo.com"
-elementFromDefault="qualified">
-<element name="book">
-<compexType>
-<sequence>
-<element name="title"/>
-<element name="author" />
-</sequence>
-</compexType>
-</element>
-<book>
-<title>JS</title>
-<author>Ebad</author>
-</book>
-</xa:schema> -->
-
-<!-- <ab:schema xmlns:ab="http://www.org/2001/XMLSchema"
-targetNamespace="http://www.carinfo.com"
-elementFromDefault="qualified">
-<element name="city">
-<complexType>
-<sequence>
-<element name="model" type="string" />
-<element name="year" type="integer" />
-
-</sequence>
-
-</complexType>
-
-</element>
-<city>
-<model>honda</model>
-<year>2022</year>
-</city>
-
-</ab:schema> -->
-
-<sh:schema xmlns:sh="http://www.org/2001/XMLSchema"
-targetNamespace="http://www.showroom.com"
-elementFromDefault="quaified">
-<element name="showroom">
-<compextype>
-<sequence>
-<element name="cars" minOccurs="0" maxOccurs="3">
-<complexType>
-<sequence>
-<element name="model" type="string"/>
-<element name="make" type="string"/>
-<element name="year" type="int"/>
-<element name="price" type="int"/>
-</sequence>
-</complexType> 
-
-</element>
-</sequence>
-
-</compextype>
-
-
-
-</element>
+<?xml-styelesheet href="style.css" type="text/css"?>
 
 
 <showroom>
@@ -133,5 +30,3 @@ elementFromDefault="quaified">
 
 
 </showroom>
-
-</sh:schema>
