@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-<?xml-styelesheet href="style.css" type="text/css"?>
-
-
-<showroom>
-<cars>
-<model>city</model>
-<make>honda</make>
-<year>2022</year>
-<price>23000</price>
-
-</cars>
-<cars>
-<model>civic</model>
-<make>honda</make>
-<year>2023</year>
-<price>25000</price>
-
-</cars>
-<cars>
-<model>Passo</model>
-<make>toyota</make>
-<year>2011</year>
-<price>23022</price>
-
-</cars>
-
-
-
-</showroom>
+<?xml-stylesheet href="style.xsl" type="text/xsl"?>
+<bookstore>
+  <book category="fiction">
+    <title lang="en">Harry Potter</title>
+    <author>J.K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+  <book category="fiction">
+    <title lang="en">The Hobbit</title>
+    <author>J.R.R. Tolkien</author>
+    <year>2012</year>
+    <price>19.99</price>
+  </book>
+  <book category="non-fiction">
+    <title lang="en">Sapiens: A Brief History of Humankind</title>
+    <author>Yuval Noah Harari</author>
+    <year>2014</year>
+    <price>15.00</price>
+  </book>
+</bookstore>
