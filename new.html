@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSON document using javascript </title>
+</head>
+<body>
+<h1>Accessing json data using javascript </h1>
+<div id="data">
+
+</div>
+
+
+<script>
+//simple way to access the json keys and values in JS
+
+
+
+let obj = {"Name" : "Ebad", "Age" : 26, "Qualification" : "Masters"}
+
+// 1)accessing json key values using dot(".")
+
+
+// let Name = obj.Name;
+// let age = obj.Age;
+// let Qualification = obj.Qualification;
+
+// 2) accesing the value using square brackets
+
+// let Name = obj["Name"];
+// let age = obj["Age"];
+// let Qualification = obj["Qualification"];
+
+// let data = document.getElementById('data');
+// data.innerHTML = "Name: " +Name+ "<br>Age: " +age+ "<br>Qualification" +Qualification; 
+// console.log(data)
+
+// 3)Access json keys and values using for in loop
+
+
+for(i in obj){
+    // document.getElementById('data').innerHTML += i+"<br>" ==> Accessing the keys from json
+    // document.getElementById('data').innerHTML += obj[i]+"<br>" Accessing value 
+    // document.getElementById('data').innerHTML += i+ ":"+ obj[i]+"<br>" Accessing keys and value both
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+    
+</body>
+</html>
